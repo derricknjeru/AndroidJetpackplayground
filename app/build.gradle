@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
@@ -35,15 +37,20 @@ dependencies {
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
 
-    implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
-    implementation "androidx.core:core-ktx:$rootProject.core_ktx"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+    implementation "androidx.core:core-ktx:$rootProject.core_version_ktx"
 
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
-    implementation "com.google.android.material:material:$rootProject.material"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout_version"
+    implementation "com.google.android.material:material:$rootProject.material_version"
+
+
+    //navigation library
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.nav_version_ktx"
 
 
     //Test dependencies
-    testImplementation "junit:junit:$rootProject.junit"
-    androidTestImplementation "androidx.test:runner:$rootProject.runner"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_core"
+    testImplementation "junit:junit:$rootProject.junit_version"
+    androidTestImplementation "androidx.test:runner:$rootProject.runner_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_core_version"
 }
