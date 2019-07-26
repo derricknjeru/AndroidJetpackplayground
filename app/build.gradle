@@ -6,9 +6,10 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.derrick"
         minSdkVersion 15
@@ -29,6 +30,15 @@ android {
     dataBinding {
         enabled = true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -36,6 +46,7 @@ dependencies {
 
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+    kapt "com.android.databinding:compiler:$kapt_compiler_version"
 
     implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
     implementation "androidx.core:core-ktx:$rootProject.core_version_ktx"

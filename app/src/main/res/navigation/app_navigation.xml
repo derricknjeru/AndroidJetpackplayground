@@ -11,16 +11,16 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/action_homeFragment_to_movieDetailsFragment"
-            app:destination="@id/movieDetailsFragment" />
+            android:id="@+id/action_homeFragment_to_tvDetailsFragment"
+            app:destination="@id/tvDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/movieDetailsFragment"
+        android:id="@+id/tvDetailsFragment"
         android:name="com.derrick.ui.TvDetailsFragment"
-        android:label="fragment_movie_details"
+        android:label="fragment_tv_details"
         tools:layout="@layout/fragment_tv_details">
         <action
-            android:id="@+id/action_movieDetailsFragment_to_castsFragment"
+            android:id="@+id/action_tvDetailsFragment_to_castsFragment"
             app:destination="@id/castsFragment" />
         <argument
             android:name="title"
@@ -36,4 +36,13 @@
         android:name="com.derrick.ui.CastsFragment"
         android:label="fragment_casts"
         tools:layout="@layout/fragment_casts" />
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.derrick.ui.DiscoverFragment"
+        android:label="DiscoverFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.derrick.ui.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

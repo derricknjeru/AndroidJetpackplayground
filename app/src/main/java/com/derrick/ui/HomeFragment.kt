@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
                 putLong(TvDetailsFragment.EXTRA_TV_ID, 100)
             }
 
-            findNavController().navigate(R.id.action_homeFragment_to_movieDetailsFragment, args)
+            findNavController().navigate(R.id.action_homeFragment_to_tvDetailsFragment, args)
         }
     }
 
