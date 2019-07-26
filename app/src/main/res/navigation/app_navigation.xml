@@ -28,7 +28,7 @@
             app:argType="string" />
         <argument
             android:name="tv_desc"
-            android:defaultValue="For decades, ex-government agent Raymond Red Reddington has been one of the globe\'s most wanted fugitives. But then he agreed to work with the FBI to catch his blacklist of mobsters, spies and international terrorists -- on the condition that he must work with profiler Elizabeth Keen. Red\'s true intentions -- choosing Liz, a woman with whom he seemingly has no connection -- are unclear. Does Liz have secrets of her own? Red promises to teach Liz to think like a criminal to see the bigger picture,whether she wants to or not."
+            android:defaultValue="For decades, ex-government agent Raymond Red Reddington has been one of the globe\'s most wanted fugitives. But then he agreed to work with the FBI to catch his blacklist of mobsters, spies and international terrorists &#8212; on the condition that he must work with profiler Elizabeth Keen. Red\'s true intentions &#8212; choosing Liz, a woman with whom he seemingly has no connection &#8212; are unclear. Does Liz have secrets of her own? Red promises to teach Liz to think like a criminal to see the bigger picture,whether she wants to or not."
             app:argType="string" />
     </fragment>
     <fragment
