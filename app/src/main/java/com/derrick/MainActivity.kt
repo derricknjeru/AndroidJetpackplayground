@@ -43,11 +43,11 @@ class MainActivity : AppCompatActivity() {
                 Integer.toString(destination.id)
             }
 
-            Toast.makeText(
+            /*Toast.makeText(
                 this@MainActivity, "Navigated to $dest",
                 Toast.LENGTH_SHORT
-            ).show()
-            Log.d("NavigationActivity", "Navigated to $dest")
+            ).show()*/
+            Log.d("MainActivity", "Navigated to $dest")
         }
     }
 

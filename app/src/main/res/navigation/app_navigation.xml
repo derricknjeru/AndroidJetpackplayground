@@ -8,16 +8,20 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.derrick.ui.HomeFragment"
-        android:label="fragment_home"
+        android:label="{title}"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_tvDetailsFragment"
             app:destination="@id/tvDetailsFragment" />
+        <argument
+            android:name="title"
+            android:defaultValue="Home"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/tvDetailsFragment"
         android:name="com.derrick.ui.TvDetailsFragment"
-        android:label="fragment_tv_details"
+        android:label="{title}"
         tools:layout="@layout/fragment_tv_details">
         <action
             android:id="@+id/action_tvDetailsFragment_to_castsFragment"
@@ -34,15 +38,30 @@
     <fragment
         android:id="@+id/castsFragment"
         android:name="com.derrick.ui.CastsFragment"
-        android:label="fragment_casts"
-        tools:layout="@layout/fragment_casts" />
+        android:label="{title}"
+        tools:layout="@layout/fragment_casts">
+        <argument
+            android:name="title"
+            android:defaultValue="James Spader"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/discoverFragment"
         android:name="com.derrick.ui.DiscoverFragment"
-        android:label="DiscoverFragment" />
+        android:label="{title}">
+        <argument
+            android:name="title"
+            android:defaultValue="Discover"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.derrick.ui.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        android:label="{title}"
+        tools:layout="@layout/fragment_settings">
+        <argument
+            android:name="title"
+            android:defaultValue="Settings"
+            app:argType="string" />
+    </fragment>
 </navigation>
