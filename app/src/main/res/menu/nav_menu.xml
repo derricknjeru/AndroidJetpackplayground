@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:id="@+id/primary">
         <item
-            android:id="@+id/homeFragment"
+            android:id="@+id/popularFragment"
             android:icon="@drawable/ic_home_black"
-            android:title="@string/home" />
+            android:title="@string/popular" />
         <item
             android:id="@+id/discoverFragment"
             android:icon="@drawable/ic_explore_black"

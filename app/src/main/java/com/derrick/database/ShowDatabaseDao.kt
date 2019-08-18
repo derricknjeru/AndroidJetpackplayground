@@ -18,4 +18,8 @@ interface ShowDatabaseDao {
     @Query("SELECT * FROM show_table")
     fun getAllShows(): LiveData<List<Show>>
 
+
+    @Query("SELECT COUNT(_id) FROM show_table")
+    fun getCount(): Int
+
 }

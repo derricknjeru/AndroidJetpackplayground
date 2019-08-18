@@ -2,11 +2,13 @@
     <string name="app_name" translatable="false">Android Jetpack playground</string>
     <string name="action_settings" translatable="true">Settings</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="home_next_button" translatable="false">HOME NEXT BUTTON</string>
+    <string name="popular_next_button" translatable="false">POPULAR NEXT BUTTON</string>
     <string name="Blacklist_title" translatable="true">Blacklist</string>
     <string name="blacklist_description" translatable="true">For decades, ex-government agent Raymond \"Red\" Reddington has been one of the globe\'s most wanted fugitives. But then he agreed to work with the FBI to catch his \"blacklist\" of mobsters, spies and international terrorists —, &#8212; on the condition that he must work with profiler Elizabeth Keen. Red\'s true intentions —, &#8212; choosing Liz, a woman with whom he seemingly has no connection —, &#8212; are unclear. Does Liz have secrets of her own? Red promises to teach Liz to think like a criminal \"to see the bigger picture,\" whether she wants to or not.</string>
-    <string name="home" translatable="true">Home</string>
+    <string name="popular" translatable="true">Popular</string>
     <string name="discover" translatable="true">Discover</string>
     <string name="settings_page" translatable="true">Settings page</string>
+    <string name="save">SAVE</string>
+    <string name="default_count">0</string>
 
 </resources>
