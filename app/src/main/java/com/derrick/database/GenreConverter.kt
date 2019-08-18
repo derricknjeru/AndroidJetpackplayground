@@ -5,7 +5,7 @@ import androidx.room.TypeConverter
 class GenreConverter {
     @TypeConverter
     fun gettingListFromString(genreIds: String): List<Int> {
-        val list = ArrayList<Int>()
+        val list = mutableListOf<Int>()
 
         val array = genreIds.split(",".toRegex()).dropLastWhile {
             it.isEmpty()
@@ -13,7 +13,7 @@ class GenreConverter {
 
         for (s in array) {
             if (s.isNotEmpty()) {
-                list.add(Integer.parseInt(s))
+                list.add(s.toInt())
             }
         }
         return list
