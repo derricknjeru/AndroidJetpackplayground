@@ -21,10 +21,8 @@ class GenreConverter {
 
     @TypeConverter
     fun writingStringFromList(list: List<Int>): String {
-        var genreIds = ""
-        for (i in list) {
-            genreIds += ",$i"
-        }
+        var genreIds=""
+        for (i in list) genreIds += ",$i"
         return genreIds
     }
 }
