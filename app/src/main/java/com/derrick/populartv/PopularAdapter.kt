@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.derrick.R
 import com.derrick.database.Show
+import com.derrick.populartv.PopularAdapter.ViewHolder.Companion.from
 
 class PopularAdapter : RecyclerView.Adapter<PopularAdapter.ViewHolder>() {
 
@@ -17,23 +18,35 @@ class PopularAdapter : RecyclerView.Adapter<PopularAdapter.ViewHolder>() {
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.show_item, parent, false)
-        return ViewHolder(view)
-    }
-
     override fun getItemCount() = data.size
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return from(parent)
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val show = data[position]
-        val res = holder.itemView.context.resources
-        holder.title.text = show.originalName
+        holder.bind(show)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val poster: ImageView = itemView.findViewById(R.id.poster)
         val title: TextView = itemView.findViewById(R.id.show_title)
+
+        fun bind(show: Show) {
+            //val res = itemView.context.resources
+            title.text = show.originalName
+        }
+
+        companion object {
+            fun from(parent: ViewGroup): ViewHolder {
+                val layoutInflater = LayoutInflater.from(parent.context)
+                val view = layoutInflater.inflate(R.layout.show_item, parent, false)
+                return ViewHolder(view)
+            }
+        }
     }
+
 
 }
