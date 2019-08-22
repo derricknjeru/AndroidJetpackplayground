@@ -29,6 +29,20 @@ class PopularViewModel(val databaseDao: ShowDatabaseDao, application: Applicatio
      */
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
+    val popularTvShows = databaseDao.getAllShows()
+
+    init {
+        initialCount()
+
+    }
+
+    private fun initialCount() {
+        uiScope.launch {
+            _count.value = getTotalCount().toString()
+        }
+
+    }
+
 
     /**
      * Shows the total count of movies
@@ -53,6 +67,19 @@ class PopularViewModel(val databaseDao: ShowDatabaseDao, application: Applicatio
             insertToDb(listOfSampleData)
 
             _count.value = getTotalCount()?.toString()
+        }
+    }
+
+    fun onClear() {
+        uiScope.launch {
+            clear()
+            _count.value = 0.toString()
+        }
+    }
+
+    private suspend fun clear() {
+        withContext(Dispatchers.IO) {
+            databaseDao.deleteAllShows()
         }
     }
 

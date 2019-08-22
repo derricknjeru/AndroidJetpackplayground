@@ -22,4 +22,7 @@ interface ShowDatabaseDao {
     @Query("SELECT COUNT(_id) FROM show_table")
     fun getCount(): Int
 
+    @Query("DELETE FROM show_table")
+    fun deleteAllShows()
+
 }

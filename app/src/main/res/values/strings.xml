@@ -10,5 +10,7 @@
     <string name="settings_page" translatable="true">Settings page</string>
     <string name="save">SAVE</string>
     <string name="default_count">0</string>
+    <string name="show_poster">Show poster</string>
+    <string name="clear">Clear</string>
 
 </resources>
