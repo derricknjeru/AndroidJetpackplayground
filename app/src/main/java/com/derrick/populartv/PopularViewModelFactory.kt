@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.derrick.database.ShowDatabaseDao
 
+@Suppress("UNCHECKED_CAST")
 class PopularViewModelFactory(
     val dataSource: ShowDatabaseDao,
     private val application: Application
